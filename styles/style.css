@@ -1,0 +1,228 @@
+/* Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: .2s linear;
+}
+
+/* Header */
+header {
+    width: 100%;
+    min-height: 210px;
+    background-image: url('../images/header.jpg');
+    background-attachment: fixed;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    line-height: 80px;
+    padding: 0 40px;
+    font-weight: bold;
+}
+.logo span{color: gold;}
+
+header ul {
+    float: right;
+    margin-right: 20px;
+}
+
+header ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+header ul li a {
+    color: #fff;
+    padding: 7px 13px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+a.active, a:hover {
+    color: gold;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+@media screen and (max-width:952px) {
+    .logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+    header h1 {
+        font-size: 25px;
+        padding-top: 25px;
+
+    }
+}
+
+@media screen and (max-width:858px) {
+    .checkbtn {
+        display: block;
+    }
+    header ul {
+        padding-top: 160px;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #222;
+        top: 80px;
+        left: -100%; 
+        text-align: center;
+        transition: all .5s;
+    }
+    header ul li {
+        display: block;
+    }
+    header ul li a {
+        font-size: 20px;
+    }
+    header ul li a:hover, a.active {
+        background: none;
+        color: gold;
+    }
+    #check:checked ~ ul{
+        left: 0 ;
+    }
+}
+
+/* Post Container */
+.container {
+    padding: 15px 9%;
+    padding-bottom: 100px;
+    margin-top: 20px;
+}
+
+.container .post-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 15px;
+}
+
+.container .box {
+    box-shadow: 0 5px 10px rgba(0, 0, 0,.2);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 10px;
+    color: #333;
+}
+
+.box .image{
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container h1 {
+    display: flex;
+    color: #333;
+    justify-content: center;
+}
+.box h2 {
+    color: #333;
+    font-size: 25px;
+    padding: 25px;
+}
+
+.box p {padding: 15px; padding-bottom: 30px;}
+.image1 {background-image: url('../images/hoi4.jpg');}
+.image2 {background-image: url('../images/fc3.jpg');}
+.image3 {background-image: url('../images/gow.jpg');}
+
+/* About Container */
+.image4, .image5 {
+    background-image: url('../images/wp.jpg');
+    border-radius: 15px;
+}
+.about-container p, .contact-container p {
+    padding-top: 40px;
+}
+
+/* Contact Container */
+.image5{background-image: url('../images/wp2.jpg');}
+
+/* Footer */
+footer {
+    height: 100px;
+    background: url('../images/header.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-right: 40px;
+}
+
+footer .active {
+    color: gold;
+}
+
+/*Hover & Responsive*/
+/* Responsive */
+@media screen and (max-width:500px) {
+    .container .post-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    footer a {
+        font-size: 19px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .navbar a {font-size: 15px;}
+    .welcome {
+        font-size: 30px;
+        padding-top: 45px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    footer a {
+        font-size: 12px;
+        padding-right: 10px;
+    }
+    header h1 {
+        font-size: 20px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .container h1 {
+        font-size: 20px;
+    }
+}
